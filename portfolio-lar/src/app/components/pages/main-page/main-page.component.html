@@ -1,0 +1,41 @@
+<div class="main-page">
+<!-- Main -->
+<div class="view">
+    <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+            <div class="container text-center white-text">
+                <div class="section-texts-intro white-text text-center wow fadeInUp">
+                    <!--
+                    <br>
+                    <p>Full page intro with background image will be always displayed?</p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.Main -->
+<!--Main Layout-->
+<main class="text-center py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-brand brand">GORNO</h1>
+                <h2>{{ 'global_title' | translate }}</h2>
+                <h4>{{ 'page_title' | translate }}</h4>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <a mdbBtn class="nav-button" routerLink="ceramics" type="button" color="info" outline="true" mdbWavesEffect>{{ 'MAIN_PAGE.ceramics_btn' | translate }}</a>
+                <p>1 lorem ipsum quis nostrud exercitation Rackham.
+                </p>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <a mdbBtn class="nav-button" routerLink="metal" type="button" color="info" outline="true" mdbWavesEffect>{{ 'MAIN_PAGE.metal_btn' | translate }}</a>
+                <p>2 lorem ipsum quis nostrud exercitation 
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
+<!--Main Layout-->
+</div>
+<router-outlet></router-outlet>

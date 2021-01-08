@@ -1,0 +1,41 @@
+@import 'src/styles.scss';
+
+.main-page {
+  height: calc(100vh - #{$total-nav-height});
+}
+
+.view {
+  background: url("https://mdbootstrap.com/img/Photos/Others/img (50).jpg")no-repeat center center;
+  background-size: cover;
+  height: 33%;
+}
+
+main {
+  min-height: 67%;
+  background-color: $background-color;
+  color: $text-color-default;
+}
+
+.section-texts-intro {
+  margin-top: 20px;
+}
+
+.text-brand {
+  font-size: 3rem;
+}
+
+.nav-button {
+  min-width: 75%;
+}
+
+@media (min-width: 576px) { 
+  .text-brand {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 768px) { 
+  .nav-button {
+    min-width: 50%;
+  }
+}

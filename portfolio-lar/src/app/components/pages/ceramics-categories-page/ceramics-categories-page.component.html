@@ -1,0 +1,22 @@
+<div class="ceramics-categories-page">
+    <div class="view">
+        <div class="full-bg-img">
+            <div class="mask rgba-black-light flex-center">
+                <!-- <div class="container text-center white-text">
+                    <div class="section-texts-intro white-text text-center wow fadeInUp">
+                        <br>
+                        <p>Full page intro with background image will be always displayed?</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <pkl-category-tile *ngFor='let categoryData of categoriesDesciptions'
+              class="col-md-4 col-sm-6 col-12"
+              [categoryImage]="categoryData">
+            </pkl-category-tile>
+        </div>
+    </div>    
+</div>

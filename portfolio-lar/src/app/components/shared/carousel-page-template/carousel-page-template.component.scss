@@ -1,0 +1,17 @@
+@import 'src/styles.scss';
+
+.carousel-page {
+    min-height: calc(100vh - #{$total-nav-height});
+    background-color: $background-color;
+    .container {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        .carousel-page-text {
+            color: $text-color-default;
+            margin-top: 1rem;
+        }
+        pkl-carousel {
+            max-height: calc(100vh - #{$total-nav-height} - 2rem);
+        }
+    }
+}

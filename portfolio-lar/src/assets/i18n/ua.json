@@ -1,0 +1,27 @@
+{
+    "global_title": "Привіт!",
+    "page_title": "Головна",
+    "MENU": {
+        "home": "Головна",
+        "about": "Про нас",
+        "pricing": "Ціни",
+        "contacts": "Контакти",
+        "portfolio": "Наші роботи"
+    },
+    "MAIN_PAGE": {
+        "ceramics_btn": "КЕРАМІКА", 
+        "metal_btn": "МЕТАЛ"
+    },
+    "CERAMICS_PAGE": {
+        "ceramics_page_title": "Кераміка",
+        "category_1": "Sculptures",
+        "category_2": "Ceramic panels",
+        "category_3": "Folk art",
+        "category_4": "Interior",
+        "category_5": "Decor",
+        "category_6": "Watercolor painting"
+    },
+    "METAL_PAGE": {
+        "metal_page_title": "Метал"
+    }
+}

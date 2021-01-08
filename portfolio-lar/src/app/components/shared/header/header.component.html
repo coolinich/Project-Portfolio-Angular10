@@ -1,0 +1,72 @@
+<!-- <pkl-switch-language></pkl-switch-language> -->
+<!-- navbar-dark unique-color -->
+<!--Navbar-->
+<mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark mdb-color darken-4" [containerInside]="false">
+
+    <!-- Navbar brand -->
+    <mdb-navbar-brand><a class="navbar-brand brand" routerLink="home">GORNO</a></mdb-navbar-brand>
+  
+    <!-- Collapsible content -->
+    <links>
+  
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          <a routerLink="home" class="nav-link waves-light" mdbWavesEffect>{{ 'MENU.home' | translate }}<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          <a routerLink="home/about-us" class="nav-link waves-light" mdbWavesEffect>{{ 'MENU.about' | translate }}</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            <a routerLink="home/prices" class="nav-link waves-light" mdbWavesEffect>{{ 'MENU.pricing' | translate }}</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          <a routerLink="home/contacts" class="nav-link waves-light" mdbWavesEffect>{{ 'MENU.contacts' | translate }}</a>
+        </li>
+  
+        <!-- Dropdown 
+        <li class="nav-item dropdown" dropdown>
+          <a
+            dropdownToggle
+            mdbWavesEffect
+            type="button"
+            class="nav-link dropdown-toggle waves-light"
+            mdbWavesEffect>
+            {{ 'MENU.portfolio' | translate }}
+            <span class="caret"></span>
+          </a>
+          <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+            <a routerLink="/portfolio-wallarts" routerLinkActive="active"  class="dropdown-item waves-light" mdbWavesEffect href="#">Wall arts</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect href="#">page 2</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect href="#">page 3</a>
+            <div class="divider dropdown-divider"></div>
+            <a class="dropdown-item waves-light" mdbWavesEffect href="#">Separated link</a>
+          </div>
+        </li> -->
+  
+      </ul>
+      <!-- Links -->
+      <!-- https://agvento.by/web-development/shablony-ssylok-messendzhery/ -->
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <li class="nav-item">
+          <a class="nav-link">
+            <mdb-icon fab icon="facebook-f"></mdb-icon>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">
+            <mdb-icon fab icon="telegram-plane"></mdb-icon>
+          </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link">
+              <mdb-icon fab icon="viber"></mdb-icon>
+            </a>
+        </li>
+      </ul>
+      <pkl-switch-language></pkl-switch-language>
+    </links>
+    <!-- Collapsible content -->
+  
+  </mdb-navbar>
+  <!--/.Navbar-->
