@@ -1,0 +1,27 @@
+{
+    "global_title": "Welcome!",
+    "page_title": "Home",
+    "MENU": {
+        "home": "Home",
+        "about": "About",
+        "pricing": "Prices",
+        "contacts": "Contacts",
+        "portfolio": "Portfolio"
+    },
+    "MAIN_PAGE": {
+        "ceramics_btn": "CERAMICS", 
+        "metal_btn": "METAL"
+    },
+    "CERAMICS_PAGE": {
+        "ceramics_page_title": "Ceramics",
+        "category_1": "Sculptures",
+        "category_2": "Ceramic panels",
+        "category_3": "Folk art",
+        "category_4": "Interior",
+        "category_5": "Decor",
+        "category_6": "Watercolor painting"
+    },
+    "METAL_PAGE": {
+        "metal_page_title": "Metal"
+    }
+}

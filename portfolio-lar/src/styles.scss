@@ -1,0 +1,27 @@
+$background-color: #1c2331;
+$background-light-color: #fff;
+$header-color: #1c2331;
+$breadcrumbs-background-color: #1c2331;
+$text-color-default: #fff;
+$text-color-dark: #1c2331;
+
+$header-height: 56px;
+$breadcrumbs-height: 42px;
+$total-nav-height: $header-height + $breadcrumbs-height;
+
+
+body {
+    color: $text-color-default;
+}
+
+.brand {
+    font-family: 'Krona One', sans-serif;
+    // font-family: 'Syncopate', sans-serif;
+    // font-family: 'Gruppo', cursive;
+    // font-family: 'Red Rose', cursive; 
+}
+
+.breadcrumb {
+    margin-bottom: 0px;
+    border-radius: 0px;
+}

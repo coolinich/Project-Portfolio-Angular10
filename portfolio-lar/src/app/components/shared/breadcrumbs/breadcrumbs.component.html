@@ -1,0 +1,16 @@
+<div class="light-font breadcrumbs-settings">
+    <mdb-breadcrumb customClass="mdb-color darken-4 white-text">
+        <mdb-breadcrumb-item
+          [ngClass]="{'white-text': breadcrumbIndex < breadcrumbItems.length - 1,  'active': breadcrumbIndex == breadcrumbItems.length - 1}"
+          *ngFor="let breadcrumbItem of breadcrumbItems; let breadcrumbIndex = index">
+            <a
+              *ngIf="breadcrumbIndex < breadcrumbItems.length - 1"
+              [routerLink]="breadcrumbItem.url"
+              class="white-text waves-light"
+              mdbWavesEffect>
+              {{ breadcrumbItem.label | translate }}
+            </a>
+            <span *ngIf="breadcrumbIndex === breadcrumbItems.length - 1">{{ breadcrumbItem.label | translate }}</span>
+        </mdb-breadcrumb-item>
+    </mdb-breadcrumb>
+</div>

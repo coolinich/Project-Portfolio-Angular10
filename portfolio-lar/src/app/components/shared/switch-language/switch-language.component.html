@@ -1,0 +1,14 @@
+<div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+    <button
+      *ngFor="let language of LANGUAGES; let languageId=index"
+      [id]="'languageId-' + languageId"
+      mdbBtn
+      type="button"
+      size="xsm"
+      class="waves-light grey lighten-5"
+      [ngClass]="languageToUse && languageId===languageToUseId ? 'selected' : (!languageToUse && languageId===0 ? 'selected' : '')"
+      mdbWavesEffect
+      (click)="changeLanguage(languageId)">
+      {{ LANGUAGES[languageId] | uppercase }}
+    </button>
+</div>

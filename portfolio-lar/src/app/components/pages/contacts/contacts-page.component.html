@@ -1,0 +1,77 @@
+<div class="contacts-page">
+    <div class="view">
+        <div class="full-bg-img">
+            <div class="mask rgba-black-light flex-center">
+                <!-- <div class="container text-center white-text">
+                    <div class="section-texts-intro white-text text-center wow fadeInUp">
+                        <br>
+                        <p>Full page intro with background image will be always displayed?</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="all-contacts text-center border border-light col-sm-12 col-md-6">
+                <p class="h4 mb-4 pt-3">Contact us</p>
+                <ul class="list-group ">
+                    <li class="list-group-item">
+                        <a class="">
+                            <mdb-icon fab icon="facebook-f"></mdb-icon>
+                            <span class="contact-detail">45465465</span>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="">
+                            <mdb-icon fab icon="telegram-plane"></mdb-icon>
+                            <span class="contact-detail">45465465</span>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="">
+                            <mdb-icon fab icon="viber"></mdb-icon>
+                            <span class="contact-detail">45465465</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>  
+            <!-- Default form contact -->
+            <form class="contacts-form text-center border border-light px-5 py-3 col-sm-12 col-md-6" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            
+                <p class="h4 mb-4">Send email</p>
+            
+                <!-- Name -->
+                <input type="text" formControlName="contactFormName" id="defaultContactFormName" mdbInput
+                class="form-control mb-4" placeholder="Name">
+            
+                <!-- Email -->
+                <input type="email" formControlName="contactFormEmail" id="defaultContactFormEmail" mdbInput
+                class="form-control mb-4" placeholder="E-mail">
+            
+                <!-- Subject -->
+                <label>Subject</label>
+                <select formControlName="contactFormSubjects" class="browser-default custom-select mb-4">
+                <option value="" disabled>Choose option</option>
+                <option value="1" selected>Question</option>
+                <option value="2">Order</option>
+                </select>
+            
+                <!-- Message -->
+                <div class="form-group">
+                <textarea formControlName="contactFormMessage" class="form-control rounded-0" mdbInput id="exampleFormControlTextarea2"
+                    rows="3" placeholder="Message"></textarea>
+                </div>
+            
+                <!-- Copy -->
+                <mdb-checkbox [default]="true" class="mb-4">Send me a copy of this message</mdb-checkbox>
+            
+                <!-- Send button -->
+                <button mdbBtn color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect"
+                mdbWavesEffect type="submit" [disabled]="disabledSubmitButton">Send</button>
+            
+            </form>
+            <!-- Default form contact -->
+        </div>  
+    </div>    
+</div>

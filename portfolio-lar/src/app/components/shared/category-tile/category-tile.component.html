@@ -1,0 +1,15 @@
+<div class="view overlay shadow-effect">
+    <img
+      [src]='categoryImage.imageAddress'
+      class="img-fluid"
+    />
+    <div class="category-name-section">
+      <p class="category-name-text">{{ categoryImage.imageCaption | translate }}</p>
+    </div>
+    <a routerLink="portfolio-wallarts">
+      <div
+        class="mask waves-effect waves-light rgba-black-slight"
+        mdbWavesEffect>
+      </div>
+    </a>
+</div>
