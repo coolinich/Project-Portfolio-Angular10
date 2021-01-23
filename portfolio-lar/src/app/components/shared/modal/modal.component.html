@@ -1,0 +1,15 @@
+<!--Modal Layout-->
+<div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fluid modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
+            <mdb-icon fas icon="times"></mdb-icon>
+        </button>
+        <img *ngIf="imageURL" class="modal-img" [src]="imageURL">
+        <p *ngIf="!imageURL">Sorry, there is no full sized image</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Modal Layout-->

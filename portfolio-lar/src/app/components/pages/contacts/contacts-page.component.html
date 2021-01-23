@@ -12,9 +12,9 @@
         </div>
     </div>
     <div class="container">
-        <div class="row">
-            <div class="all-contacts text-center border border-light col-sm-12 col-md-6">
-                <p class="h4 mb-4 pt-3">Contact us</p>
+        <div class="row separator">
+            <div class="all-contacts text-center col-sm-12 col-md-6">
+                <p class="h4 mb-4 pt-3">{{ "CONTACTS_PAGE.contacts_heading" | translate }}</p>
                 <ul class="list-group ">
                     <li class="list-group-item">
                         <a class="">
@@ -35,40 +35,32 @@
                         </a>
                     </li>
                 </ul>
-            </div>  
+            </div>
             <!-- Default form contact -->
-            <form class="contacts-form text-center border border-light px-5 py-3 col-sm-12 col-md-6" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <form class="contacts-form text-center px-5 py-3 col-sm-12 col-md-6" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
             
-                <p class="h4 mb-4">Send email</p>
+                <p class="h4 mb-4">{{ "CONTACTS_PAGE.CONTACT_FORM.heading" | translate }}</p>
             
                 <!-- Name -->
                 <input type="text" formControlName="contactFormName" id="defaultContactFormName" mdbInput
-                class="form-control mb-4" placeholder="Name">
+                class="form-control mb-4" [placeholder]="'CONTACTS_PAGE.CONTACT_FORM.name' | translate">
             
                 <!-- Email -->
                 <input type="email" formControlName="contactFormEmail" id="defaultContactFormEmail" mdbInput
-                class="form-control mb-4" placeholder="E-mail">
-            
-                <!-- Subject -->
-                <label>Subject</label>
-                <select formControlName="contactFormSubjects" class="browser-default custom-select mb-4">
-                <option value="" disabled>Choose option</option>
-                <option value="1" selected>Question</option>
-                <option value="2">Order</option>
-                </select>
+                class="form-control mb-4" [placeholder]="'CONTACTS_PAGE.CONTACT_FORM.email' | translate">
             
                 <!-- Message -->
                 <div class="form-group">
                 <textarea formControlName="contactFormMessage" class="form-control rounded-0" mdbInput id="exampleFormControlTextarea2"
-                    rows="3" placeholder="Message"></textarea>
+                    rows="3" [placeholder]="'CONTACTS_PAGE.CONTACT_FORM.message' | translate"></textarea>
                 </div>
             
                 <!-- Copy -->
-                <mdb-checkbox [default]="true" class="mb-4">Send me a copy of this message</mdb-checkbox>
+                <mdb-checkbox formControlName="contactFormCopy" class="mb-4">{{ "CONTACTS_PAGE.CONTACT_FORM.send_copy_label" | translate }}</mdb-checkbox>
             
                 <!-- Send button -->
                 <button mdbBtn color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect"
-                mdbWavesEffect type="submit" [disabled]="disabledSubmitButton">Send</button>
+                mdbWavesEffect type="submit" [disabled]="disabledSubmitButton">{{ "CONTACTS_PAGE.CONTACT_FORM.button" | translate }}</button>
             
             </form>
             <!-- Default form contact -->

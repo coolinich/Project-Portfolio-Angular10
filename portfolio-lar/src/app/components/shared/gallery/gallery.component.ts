@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { Image } from 'src/app/interfaces/image';
+import { ModalComponent } from 'src/app/components/shared/modal/modal.component';
 
 @Component({
   selector: 'pkl-gallery',
@@ -8,9 +9,18 @@ import { Image } from 'src/app/interfaces/image';
 })
 export class GalleryComponent implements OnInit {
   @Input() images: Image[];
+  @ViewChild(ModalComponent) modalComponent: ModalComponent;
+
+  public imageUrl: string;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  showFullImage(selectedImageUrl: string) {
+      this.imageUrl = selectedImageUrl;
+      this.modalComponent.showModal();
   }
 
 }

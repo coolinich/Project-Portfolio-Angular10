@@ -1,5 +1,7 @@
 @import 'src/styles.scss';
 
+$intro-image-height: 34%;
+
 .main-page {
   height: calc(100vh - #{$total-nav-height});
 }
@@ -7,11 +9,11 @@
 .view {
   background: url("https://mdbootstrap.com/img/Photos/Others/img (50).jpg")no-repeat center center;
   background-size: cover;
-  height: 33%;
+  height: $intro-image-height / 2;
 }
 
 main {
-  min-height: 67%;
+  min-height: 100% - $intro-image-height / 2;
   background-color: $background-color;
   color: $text-color-default;
 }
@@ -30,7 +32,7 @@ main {
 
 @media (min-width: 576px) { 
   .text-brand {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }
 
@@ -38,4 +40,17 @@ main {
   .nav-button {
     min-width: 50%;
   }
+
+  .text-brand {
+    font-size: 5rem;
+  }
+
+  .view {
+    height: $intro-image-height;
+  }
+
+  main {
+    min-height: 100% - $intro-image-height;
+  }  
+
 }

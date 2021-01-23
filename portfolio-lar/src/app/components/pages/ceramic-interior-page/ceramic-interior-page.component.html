@@ -1,0 +1,9 @@
+<pkl-carousel-page-template 
+  [templateSettings]='interiorPageSettings'
+  [customTemplate]='backButtonTemplate'
+>
+</pkl-carousel-page-template>
+
+<ng-template #backButtonTemplate>
+    <button type="button" mdbBtn color="link" (click)="goBack()">Link</button>
+</ng-template>

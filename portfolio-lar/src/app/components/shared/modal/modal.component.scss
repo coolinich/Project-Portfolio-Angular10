@@ -1,0 +1,23 @@
+@import 'src/styles.scss';
+
+.modal-dialog {
+    margin: .5rem auto;
+}
+
+.modal-content {
+    background-color: $background-color;
+}
+
+.modal-body {
+    padding: .5rem;
+}
+
+.modal-img {
+    max-width: 100%;
+    max-height: calc(100vh - 3rem);
+}
+
+.close {
+    padding: .25rem .5rem;
+    color: $text-color-default;
+}

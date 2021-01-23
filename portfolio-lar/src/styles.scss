@@ -4,11 +4,16 @@ $header-color: #1c2331;
 $breadcrumbs-background-color: #1c2331;
 $text-color-default: #fff;
 $text-color-dark: #1c2331;
+$text-color-disabled: #b1bace;
+$text-color-highlight: #ff8f00; 
 
 $header-height: 56px;
 $breadcrumbs-height: 42px;
 $total-nav-height: $header-height + $breadcrumbs-height;
 
+* {
+    box-sizing: border-box;
+}
 
 body {
     color: $text-color-default;

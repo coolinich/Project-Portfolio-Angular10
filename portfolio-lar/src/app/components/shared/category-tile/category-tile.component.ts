@@ -8,10 +8,7 @@ import { Image } from 'src/app/interfaces/image';
 })
 export class CategoryTileComponent implements OnInit {
   @Input() categoryImage: Image;
-  // categoryImage: Image = {
-  //   imageAddress: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/6-col/img%20(54).jpg',
-  //   imageCaption: 'Category 1'
-  // }
+  @Input() categoryRoute: string;
 
   constructor() { }
 

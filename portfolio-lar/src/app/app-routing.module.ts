@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { MainPageComponent } from '../app/components/pages/main-page/main-page.component';
-import { PortfolioWallartsComponent } from '../app/components/pages/portfolio-wallarts/portfolio-wallarts.component';
+import { MainPageComponent } from './components/pages/main-page/main-page.component';
+import { CeramicsInteriorsPageComponent } from './components/pages/ceramics-interiors-page/ceramics-interiors-page.component';
+import { CeramicInteriorPageComponent } from './components/pages/ceramic-interior-page/ceramic-interior-page.component';
 import { ContactsPageComponent } from './components/pages/contacts/contacts-page.component';
 import { PricesPageComponent } from './components/pages/prices-page/prices-page.component';
 import { AboutUsPageComponent } from './components/pages/about-us-page/about-us-page.component';
 import { CeramicsCategoriesPageComponent } from './components/pages/ceramics-categories-page/ceramics-categories-page.component';
 import { MetalCategoriesPageComponent } from './components/pages/metal-categories-page/metal-categories-page.component';
+import { CeramicsWatercolorPageComponent } from './components/pages/ceramics-watercolor-page/ceramics-watercolor-page.component';
 
 
 const routes: Routes = [
@@ -41,11 +43,36 @@ const routes: Routes = [
             component: CeramicsCategoriesPageComponent
           },
           {
-            path: 'portfolio-wallarts',
-            component: PortfolioWallartsComponent,
+            path: 'interiors',
             data:
             {
-              breadcrumb: 'Wall arts'
+              breadcrumb: 'CERAMICS_PAGE.category_4'
+            },
+            children: [
+              {
+                path: '',
+                data: 
+                {
+                  breadcrumb: null
+                },
+                component: CeramicsInteriorsPageComponent
+              },
+              {
+                path: ':id',
+                component: CeramicInteriorPageComponent,
+                data:
+                {
+                  breadcrumb: 'CERAMICS_PAGE.sub_category_4'
+                }
+              }
+            ]
+          },
+          {
+            path: 'watercolor',
+            component: CeramicsWatercolorPageComponent,
+            data:
+            {
+              breadcrumb: 'CERAMICS_PAGE.category_6'
             }
           }
         ]

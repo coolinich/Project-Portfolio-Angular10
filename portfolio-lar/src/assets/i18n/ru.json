@@ -9,19 +9,45 @@
         "portfolio": "Наши работы"
     },
     "MAIN_PAGE": {
-        "ceramics_btn": "CERAMICS", 
-        "metal_btn": "METAL"
+        "ceramics_btn": "КЕРАМИКА", 
+        "metal_btn": "МЕТАЛЛ",
+        "ceramics_section_text": "Name L",
+        "metal_section_text": "Name I"
     },
     "CERAMICS_PAGE": {
-        "ceramics_page_title": "Ceramics",
-        "category_1": "Sculptures",
-        "category_2": "Ceramic panels",
-        "category_3": "Folk art",
-        "category_4": "Interior",
-        "category_5": "Decor",
-        "category_6": "Watercolor painting"
+        "ceramics_page_title": "Керамика",
+        "category_1": "Скульптура",
+        "category_2": "Панно",
+        "category_3": "Фольк",
+        "category_4": "Интерьеры",
+        "category_5": "Декор",
+        "category_6": "Акварель",
+        "sub_category_4": "Дизайн интерьера"
     },
     "METAL_PAGE": {
-        "metal_page_title": "Metal"
+        "metal_page_title": "Металл"
+    },
+    "ABOUT_US_PAGE": {
+        "heading": "Про нас",
+        "description": "Больше про нас"
+    },
+    "PRICES_PAGE": {
+        "heading": "Наши цены",
+        "description": "Точную цену можно узнать по запросу, формируется индивидуально. Ориентировочно цены есть на примерах работ."
+    },
+    "CONTACTS_PAGE": {
+        "contacts_heading": "Связаться с нами",
+        "CONTACT_FORM": {
+            "heading": "Написать письмо",
+            "name": "Имя",
+            "email": "E-mail",
+            "message": "Сообщение",
+            "send_copy_label": "Выслать мне копию письма",
+            "button": "ОТПРАВИТЬ"
+        }
+    },
+    "GALLERY_PAGE": {
+        "in_stock_label": "В наличии",
+        "out_stock_label": "Продано"
     }
 }

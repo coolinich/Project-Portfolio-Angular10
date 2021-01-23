@@ -10,18 +10,44 @@
     },
     "MAIN_PAGE": {
         "ceramics_btn": "КЕРАМІКА", 
-        "metal_btn": "МЕТАЛ"
+        "metal_btn": "МЕТАЛ",
+        "ceramics_section_text": "Name L",
+        "metal_section_text": "Name I"
     },
     "CERAMICS_PAGE": {
         "ceramics_page_title": "Кераміка",
-        "category_1": "Sculptures",
-        "category_2": "Ceramic panels",
-        "category_3": "Folk art",
-        "category_4": "Interior",
-        "category_5": "Decor",
-        "category_6": "Watercolor painting"
+        "category_1": "Скульптура",
+        "category_2": "Панно",
+        "category_3": "Фольк",
+        "category_4": "Інтер'єри",
+        "category_5": "Декор",
+        "category_6": "Акварель",
+        "sub_category_4": "Дизайн інтер'єру"
     },
     "METAL_PAGE": {
         "metal_page_title": "Метал"
+    },
+    "ABOUT_US_PAGE": {
+        "heading": "Трішки про нас",
+        "description": "Дещо детальніше про нас"
+    },
+    "PRICES_PAGE": {
+        "heading": "Наші ціни",
+        "description": "Точну ціну питайте, приблизну можна побачити на прикладах робіт"
+    },
+    "CONTACTS_PAGE": {
+        "contacts_heading": "Зв'язатись з нами",
+        "CONTACT_FORM": {
+            "heading": "Надіслати листа",
+            "name": "Им'я",
+            "email": "E-mail",
+            "message": "Повідмлення",
+            "send_copy_label": "Надіслати мені копію листа",
+            "button": "НАДІСЛАТИ"
+        }
+    },
+    "GALLERY_PAGE": {
+        "in_stock_label": "В наявності",
+        "out_stock_label": "Продано"
     }
 }

@@ -1,4 +1,4 @@
-<div class="about-us-page">
+<div class="ceramics-categories-page">
     <div class="view">
         <div class="full-bg-img">
             <div class="mask rgba-black-light flex-center">
@@ -13,10 +13,11 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="about-page-content col-12">
-                <h2>{{ 'ABOUT_US_PAGE.heading' | translate }}</h2>
-                <p>{{ 'ABOUT_US_PAGE.description' | translate }}</p>
-            </div>
+            <pkl-category-tile *ngFor='let interiorData of interiorDesciptions'
+              class="col-md-4 col-sm-6 col-12"
+              [categoryImage]="interiorData"
+              [categoryRoute]="interiorData?.imageTag">
+            </pkl-category-tile>
         </div>
     </div>    
 </div>

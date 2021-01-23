@@ -1,0 +1,20 @@
+@import 'src/styles.scss';
+
+.ceramics-categories-page {
+    min-height: calc(100vh - #{$total-nav-height});
+    background-color: $background-color;
+}
+
+.view {
+    background: url("https://mdbootstrap.com/img/Photos/Others/img (50).jpg")no-repeat center center;
+    background-size: cover;
+    height: $total-nav-height;
+}
+
+.container {
+    padding-top: $total-nav-height;
+}
+
+.row {
+    padding-bottom: 1rem;
+}
