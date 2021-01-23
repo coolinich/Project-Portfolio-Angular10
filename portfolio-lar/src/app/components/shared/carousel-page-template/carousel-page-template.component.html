@@ -1,13 +1,14 @@
 <div class="carousel-page">
     <div class="container">
-        <pkl-carousel [images]='templateImages'></pkl-carousel>
+        <pkl-carousel [images]='templateSettings.templateImages'></pkl-carousel>
         <div class="carousel-page-text">
             <h3 class="carousel-page-title">
-                Why do we use it?
+                {{ templateSettings?.templateHeading | translate }}
             </h3>
             <p class="carousel-page-description">
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+                {{ templateSettings?.templateText | translate }}
             </p>
         </div>
+        <ng-container *ngTemplateOutlet="customTemplate"></ng-container>
     </div>
 </div>

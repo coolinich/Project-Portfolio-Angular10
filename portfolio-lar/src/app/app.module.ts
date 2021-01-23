@@ -16,7 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MainPageComponent } from './components/pages/main-page/main-page.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { SwitchLanguageComponent } from './components/shared/switch-language/switch-language.component';
-import { PortfolioWallartsComponent } from './components/pages/portfolio-wallarts/portfolio-wallarts.component';
+import { CeramicsInteriorsPageComponent } from './components/pages/ceramics-interiors-page/ceramics-interiors-page.component';
 import { CarouselComponent } from './components/shared/carousel/carousel.component';
 import { ContactsPageComponent } from './components/pages/contacts/contacts-page.component';
 import { PricesPageComponent } from './components/pages/prices-page/prices-page.component';
@@ -28,6 +28,10 @@ import { CategoryTileComponent } from './components/shared/category-tile/categor
 import { GalleryComponent } from './components/shared/gallery/gallery.component';
 import { GalleryPageTemplateComponent } from './components/shared/gallery-page-template/gallery-page-template.component';
 import { CarouselPageTemplateComponent } from './components/shared/carousel-page-template/carousel-page-template.component';
+import { CeramicsWatercolorPageComponent } from './components/pages/ceramics-watercolor-page/ceramics-watercolor-page.component';
+import { MetalWatercolorPageComponent } from './components/pages/metal-watercolor-page/metal-watercolor-page.component';
+import { CeramicInteriorPageComponent } from './components/pages/ceramic-interior-page/ceramic-interior-page.component';
+import { ModalComponent } from './components/shared/modal/modal.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, "/assets/i18n/", ".json");
@@ -39,7 +43,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MainPageComponent,
     HeaderComponent,
     SwitchLanguageComponent,
-    PortfolioWallartsComponent,
+    CeramicsInteriorsPageComponent,
     CarouselComponent,
     ContactsPageComponent,
     PricesPageComponent,
@@ -50,7 +54,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     CategoryTileComponent,
     GalleryComponent,
     GalleryPageTemplateComponent,
-    CarouselPageTemplateComponent
+    CarouselPageTemplateComponent,
+    CeramicsWatercolorPageComponent,
+    MetalWatercolorPageComponent,
+    CeramicInteriorPageComponent,
+    ModalComponent
   ],
   imports: [
     MDBBootstrapModule.forRoot(),

@@ -9,19 +9,45 @@
         "portfolio": "Portfolio"
     },
     "MAIN_PAGE": {
-        "ceramics_btn": "CERAMICS", 
-        "metal_btn": "METAL"
+        "ceramics_btn": "CERAMICS",
+        "metal_btn": "METAL",
+        "ceramics_section_text": "Name L",
+        "metal_section_text": "Name I"
     },
     "CERAMICS_PAGE": {
         "ceramics_page_title": "Ceramics",
         "category_1": "Sculptures",
         "category_2": "Ceramic panels",
         "category_3": "Folk art",
-        "category_4": "Interior",
+        "category_4": "Interiors",
         "category_5": "Decor",
-        "category_6": "Watercolor painting"
+        "category_6": "Watercolor painting",
+        "sub_category_4": "Interior design"
     },
     "METAL_PAGE": {
         "metal_page_title": "Metal"
+    },
+    "ABOUT_US_PAGE": {
+        "heading": "About us",
+        "description": "Some text about us"
+    },
+    "PRICES_PAGE": {
+        "heading": "Prices",
+        "description": "Ask about prices directly"
+    },
+    "CONTACTS_PAGE": {
+        "contacts_heading": "Contact us",
+        "CONTACT_FORM": {
+            "heading": "Send email",
+            "name": "Name",
+            "email": "E-mail",
+            "message": "Message",
+            "send_copy_label": "Send me a copy of this message",
+            "button": "SEND"
+        }
+    },
+    "GALLERY_PAGE": {
+        "in_stock_label": "Available",
+        "out_stock_label": "Sold out"
     }
 }

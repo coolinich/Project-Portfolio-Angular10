@@ -1,1 +1,14 @@
-<pkl-gallery [images]="templateImages"></pkl-gallery>
+<div class="gallery-page">
+    <div class="container">
+        <div class="gallery-page-text">
+            <h3 class="gallery-page-title">
+                {{ templateSettings?.templateHeading | translate }}
+            </h3>
+            <p class="gallery-page-description">
+                {{ templateSettings?.templateText | translate }}
+            </p>
+        </div>
+        <pkl-gallery [images]="templateSettings?.templateImages"></pkl-gallery>
+        <ng-container *ngTemplateOutlet="customTemplate"></ng-container>
+    </div>
+</div>

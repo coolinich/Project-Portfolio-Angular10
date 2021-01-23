@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Image } from 'src/app/interfaces/image';
+import { Component, Input, OnInit, TemplateRef } from '@angular/core';
+import { ImagesDescription } from 'src/app/interfaces/image';
 
 @Component({
   selector: 'pkl-carousel-page-template',
@@ -7,10 +7,11 @@ import { Image } from 'src/app/interfaces/image';
   styleUrls: ['./carousel-page-template.component.scss']
 })
 export class CarouselPageTemplateComponent implements OnInit {
-  @Input() templateImages: Image[];
+  @Input() templateSettings: ImagesDescription;
+  @Input() customTemplate: TemplateRef<any>;
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }

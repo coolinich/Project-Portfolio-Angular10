@@ -1,7 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { stringify } from '@angular/compiler/src/util';
+import { MailService } from 'src/app/services/mail.service';
 
 @Component({
   selector: 'pkl-contacts-page',
@@ -22,14 +21,13 @@ export class ContactsPageComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private http: HttpClient
-    ) {
+    private mailService: MailService
+  ) {
     this.contactForm = fb.group({
       'contactFormName': ['', Validators.required],
       'contactFormEmail': ['', Validators.compose([Validators.required, Validators.email])],
-      'contactFormSubjects': ['', Validators.required],
       'contactFormMessage': ['', Validators.required],
-      'contactFormCopy': [''],
+      'contactFormCopy': [false],
       });
   }
    
@@ -37,23 +35,20 @@ export class ContactsPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit() {
-    var payload = new FormData();
-    payload.append('name', this.contactForm.get('contactFormName').value);
-    payload.append('message', this.contactForm.get('contactFormMessage').value);
-    payload.append('email', this.contactForm.get('contactFormEmail').value);
-
-    this.http.post('', payload).subscribe(
-      (response) => {
-        console.log('success', response);
-      },
-      (error) => {
-        console.log('error', error);
-      }
-    )
-    //console.log('payload', payload.get('name'));
-    // this.contactForm.reset();
-    this.disabledSubmitButton = true;
+  get contactFormCopy() {
+    return this.contactForm.get('contactFormCopy') as FormGroup;
   }
 
+  onSubmit() {
+    this.mailService.sendEmail(this.contactForm.value).subscribe(
+      (response) => {
+        console.log('success from component', response);
+        this.contactForm.reset();
+        this.disabledSubmitButton = true;
+      },
+      (error) => {
+        console.log('error from component', error);
+      }
+    )
+  }
 }

@@ -15,7 +15,8 @@
         <div class="row">
             <pkl-category-tile *ngFor='let categoryData of categoriesDesciptions'
               class="col-md-4 col-sm-6 col-12"
-              [categoryImage]="categoryData">
+              [categoryImage]="categoryData"
+              [categoryRoute]="routesToCategoriesPages[categoryData.imageId]">
             </pkl-category-tile>
         </div>
     </div>    

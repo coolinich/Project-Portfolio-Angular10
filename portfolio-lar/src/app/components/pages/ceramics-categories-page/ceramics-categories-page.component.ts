@@ -10,6 +10,14 @@ import { Image } from 'src/app/interfaces/image';
 })
 export class CeramicsCategoriesPageComponent implements OnInit {
   categoriesDesciptions: Image[];
+  routesToCategoriesPages = {
+    1: "",
+    2: "",
+    3: "",
+    4: "interiors",
+    5: "",
+    6: "watercolor"
+  }
 
   constructor(
     private imageService: ImageService

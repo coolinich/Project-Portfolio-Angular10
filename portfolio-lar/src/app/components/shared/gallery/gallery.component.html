@@ -1,1 +1,29 @@
-<p>gallery works!</p>
+<!--Main Layout-->
+<div class="row align-items-center">
+    <div *ngFor="let image of images" class="gallery-item col-12 col-sx-6 col-md-4">
+      <div class="" (click)="showFullImage(image.imageAddress)">
+        <img class="d-block w-100" [src]="image.imageAddress" [alt]="image.imageCaption">
+        <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+      </div>
+      <div class="gallery-item-caption">
+          <div class="d-flex align-items-center">
+            <span class="gallery-item-price" [ngClass]="{'active-price': image.onSale}">{{ image.imageCaption }}</span>
+            <span 
+              *ngIf="image.onSale"
+              class="gallery-item-label active-label ml-auto">
+              {{ "GALLERY_PAGE.in_stock_label" | translate }}
+            </span>
+            <span 
+              *ngIf="!image.onSale"
+              class="gallery-item-label disabled-label ml-auto">
+              {{ "GALLERY_PAGE.out_stock_label" | translate }}
+            </span>
+          </div>
+        <p class="gallery-item-details">{{ image.imageSecondaryText }}</p>
+      </div>
+    </div>
+</div>
+<!--Main Layout-->
+<!--Call Popup-->
+<pkl-modal [imageURL]="imageUrl"></pkl-modal>
+<!--Call Popup-->

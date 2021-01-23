@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PortfolioWallartsComponent } from './portfolio-wallarts.component';
+import { CeramicsInteriorsPageComponent } from './ceramics-interiors-page.component';
 
 describe('PortfolioWallartsComponent', () => {
-  let component: PortfolioWallartsComponent;
-  let fixture: ComponentFixture<PortfolioWallartsComponent>;
+  let component: CeramicsInteriorsPageComponent;
+  let fixture: ComponentFixture<CeramicsInteriorsPageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PortfolioWallartsComponent ]
+      declarations: [ CeramicsInteriorsPageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PortfolioWallartsComponent);
+    fixture = TestBed.createComponent(CeramicsInteriorsPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
