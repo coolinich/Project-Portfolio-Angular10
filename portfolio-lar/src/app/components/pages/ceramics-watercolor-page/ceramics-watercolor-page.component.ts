@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { ImagesDescription } from 'src/app/interfaces/image';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
+import { Image, ImagesDescription } from 'src/app/interfaces/image';
 import { ImageService } from 'src/app/services/image.service';
 
 @Component({
@@ -7,8 +9,11 @@ import { ImageService } from 'src/app/services/image.service';
   templateUrl: './ceramics-watercolor-page.component.html',
   styleUrls: ['./ceramics-watercolor-page.component.scss']
 })
-export class CeramicsWatercolorPageComponent implements OnInit {
+export class CeramicsWatercolorPageComponent implements OnInit, OnDestroy {
   watercolorPageSettings: ImagesDescription;
+  showPreloader: boolean = true;
+
+  private readonly activePageSubject$ = new Subject();
   
   constructor(
     private imageService: ImageService
@@ -16,10 +21,23 @@ export class CeramicsWatercolorPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.watercolorPageSettings = {
-      templateHeading: "Some watercolor masterpieces",
-      templateText: "Something about them",
-      templateImages: this.imageService.getImagesByPage('CERAMIC_WATERCOLOR_PAGE')
+      templateHeading: "CERAMICS_WATERCOLOR_PAGE.heading",
+      templateText: "CERAMICS_WATERCOLOR_PAGE.description",
+      templateImages: []
     }
+
+    this.imageService.getImagesByKeyValue('imagePage', 'CERAMIC_WATERCOLOR_PAGE')
+    .pipe(takeUntil(this.activePageSubject$))
+    .subscribe(
+      (imagesFromDB: Image[] | any[]) => {
+        this.watercolorPageSettings.templateImages= imagesFromDB;
+        this.showPreloader = false;
+      }
+    )
+
   }
 
+  ngOnDestroy() {
+    this.activePageSubject$.next();
+  }
 }

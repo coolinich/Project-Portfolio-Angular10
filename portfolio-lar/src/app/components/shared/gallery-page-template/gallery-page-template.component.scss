@@ -6,12 +6,9 @@
     .container {
         padding-top: 1rem;
         padding-bottom: 1rem;
-        .gallery-page-text {
-            color: $text-color-default;
-            margin-top: 1rem;
-        }
-        // pkl-carousel {
-        //     max-height: calc(100vh - #{$total-nav-height} - 2rem);
+        color: $text-color-default;
+        // .gallery-page-heading,  .gallery-page-text {
+        //     margin-top: 1rem;
         // }
     }
 }

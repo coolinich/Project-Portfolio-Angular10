@@ -1,11 +1,23 @@
-$background-color: #1c2331;
+$background-color: rgb(28, 35, 49);
 $background-light-color: #fff;
-$header-color: #1c2331;
-$breadcrumbs-background-color: #1c2331;
+$header-color: rgb(28, 35, 49);
+$breadcrumbs-background-color: rgb(28, 35, 49);
 $text-color-default: #fff;
-$text-color-dark: #1c2331;
-$text-color-disabled: #b1bace;
-$text-color-highlight: #ff8f00; 
+$text-color-dark: rgb(28, 35, 49);
+$text-color-disabled: rgb(190, 213, 220);
+$text-color-highlight: rgb(231, 121, 25);
+$text-color-highlight-regular: rgb(0, 146, 93);
+$text-color-main-active: rgb(162, 85, 35);
+$text-color-main-disabled: rgb(157, 127, 124);
+
+// $background-color: #1c2331;
+// $background-light-color: #fff;
+// $header-color: #1c2331;
+// $breadcrumbs-background-color: #1c2331;
+// $text-color-default: #fff;
+// $text-color-dark: #1c2331;
+// $text-color-disabled: #b1bace;
+// $text-color-highlight: #ff8f00; 
 
 $header-height: 56px;
 $breadcrumbs-height: 42px;
@@ -17,16 +29,26 @@ $total-nav-height: $header-height + $breadcrumbs-height;
 
 body {
     color: $text-color-default;
+    background-color: $background-color;
+//    font-family: 'Comfortaa', cursive;
+//    font-family: 'Didact Gothic', sans-serif;
+    font-family: 'M PLUS 1p', sans-serif;
 }
 
 .brand {
     font-family: 'Krona One', sans-serif;
-    // font-family: 'Syncopate', sans-serif;
-    // font-family: 'Gruppo', cursive;
+    color: $text-color-default;
+    //font-family: 'Syncopate', sans-serif;
+    //font-family: 'Gruppo', cursive;
     // font-family: 'Red Rose', cursive; 
 }
 
 .breadcrumb {
     margin-bottom: 0px;
     border-radius: 0px;
+}
+
+.btn-outline-info {
+    border: 2px solid $text-color-main-active!important;
+    color: $text-color-main-active!important;
 }

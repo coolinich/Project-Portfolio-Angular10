@@ -1,7 +1,7 @@
 <!--Main Layout-->
 <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
-    <mdb-carousel-item *ngFor="let image of images">
-      <div class="view w-100">
+    <mdb-carousel-item *ngFor="let image of images" class="carousel-item-size">
+      <div class="view w-80 text-center">
         <img class="d-block w-100" [src]="image.imageAddress" [alt]="image.imageCaption">
         <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
       </div>

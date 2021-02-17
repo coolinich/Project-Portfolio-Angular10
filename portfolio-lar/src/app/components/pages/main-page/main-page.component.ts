@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
+
 @Component({
     selector: 'pkl-main-page',
     styleUrls: ['main-page.component.scss'],
@@ -8,5 +9,5 @@ import { TranslateService } from '@ngx-translate/core';
 })
 
 export class MainPageComponent {
-    constructor(translate: TranslateService) {}
+   constructor(translate: TranslateService) {}
 }

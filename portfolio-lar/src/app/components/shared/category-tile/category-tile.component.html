@@ -1,9 +1,9 @@
-<div class="view overlay shadow-effect">
+<div class="view shadow-effect">
     <img
       [src]='categoryImage.imageAddress'
       class="img-fluid"
     />
-    <div class="category-name-section">
+    <div class="category-name-section mask rgba-brown-light flex-center">
       <p class="category-name-text">{{ categoryImage.imageCaption | translate }}</p>
     </div>
     <a [routerLink]="categoryRoute">

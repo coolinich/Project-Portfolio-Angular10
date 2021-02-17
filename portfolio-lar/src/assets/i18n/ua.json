@@ -1,6 +1,9 @@
 {
     "global_title": "Привіт!",
     "page_title": "Головна",
+    "PLACEHOLDER": {
+        "no_images": "В пошуках натхнення..."
+    },
     "MENU": {
         "home": "Головна",
         "about": "Про нас",
@@ -49,5 +52,30 @@
     "GALLERY_PAGE": {
         "in_stock_label": "В наявності",
         "out_stock_label": "Продано"
+    },
+    "CERAMICS_SCULPTURES_PAGE": {
+        "heading": "Скульптура",
+        "description": "Скульптура"
+    },
+    "CERAMICS_PANELS_PAGE": {
+        "heading": "Унікальні панно",
+        "description": "Додайте унікального декорування вашим стінам"
+    },
+    "CERAMICS_FOLKART_PAGE": {
+        "heading": "Фольк",
+        "description": "Фольк-мотиви"
+    },
+    "CERAMICS_INTERIORS_PAGE": {
+        "heading": "Дизайн інтер'єрів",
+        "description": "Ідеї дизайнів інтер'єрів",
+        "categories_title": "Ідея "
+    },
+    "CERAMICS_DECOR_PAGE": {
+        "heading": "Унікальні декори",
+        "description": "Додайте унікального декорування вашим стінам чи інтер'єру"
+    },
+    "CERAMICS_WATERCOLOR_PAGE": {
+        "heading": "Акварель",
+        "description": "Роботи акварелью"
     }
 }

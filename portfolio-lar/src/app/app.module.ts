@@ -33,6 +33,18 @@ import { MetalWatercolorPageComponent } from './components/pages/metal-watercolo
 import { CeramicInteriorPageComponent } from './components/pages/ceramic-interior-page/ceramic-interior-page.component';
 import { ModalComponent } from './components/shared/modal/modal.component';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+
+import { environment } from 'src/environments/environment';
+import { CeramicDecorPageComponent } from './components/pages/ceramic-decor-page/ceramic-decor-page.component';
+import { CeramicSculpturesPageComponent } from './components/pages/ceramic-sculptures-page/ceramic-sculptures-page.component';
+import { CeramicFolkartPageComponent } from './components/pages/ceramic-folkart-page/ceramic-folkart-page.component';
+import { CeramicPanelsPageComponent } from './components/pages/ceramic-panels-page/ceramic-panels-page.component';
+import { PreloaderComponent } from './components/shared/preloader/preloader.component';
+import { ImagesPlaceholderComponent } from './components/shared/images-placeholder/images-placeholder.component';
+import { GalleryItemComponent } from './components/shared/gallery-item/gallery-item.component';
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, "/assets/i18n/", ".json");
 }
@@ -58,7 +70,14 @@ export function HttpLoaderFactory(http: HttpClient) {
     CeramicsWatercolorPageComponent,
     MetalWatercolorPageComponent,
     CeramicInteriorPageComponent,
-    ModalComponent
+    ModalComponent,
+    CeramicDecorPageComponent,
+    CeramicSculpturesPageComponent,
+    CeramicFolkartPageComponent,
+    CeramicPanelsPageComponent,
+    PreloaderComponent,
+    ImagesPlaceholderComponent,
+    GalleryItemComponent
   ],
   imports: [
     MDBBootstrapModule.forRoot(),
@@ -72,7 +91,9 @@ export function HttpLoaderFactory(http: HttpClient) {
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

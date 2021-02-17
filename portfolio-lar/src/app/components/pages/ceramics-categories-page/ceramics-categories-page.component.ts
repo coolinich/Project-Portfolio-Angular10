@@ -11,18 +11,18 @@ import { Image } from 'src/app/interfaces/image';
 export class CeramicsCategoriesPageComponent implements OnInit {
   categoriesDesciptions: Image[];
   routesToCategoriesPages = {
-    1: "",
-    2: "",
-    3: "",
+    1: "sculptures",
+    2: "panels",
+    3: "folkart",
     4: "interiors",
-    5: "",
+    5: "decor",
     6: "watercolor"
   }
 
   constructor(
     private imageService: ImageService
   ) {
-    this.categoriesDesciptions = this.imageService.getImagesByPage('CERAMICS_PAGE');
+    this.categoriesDesciptions = this.imageService.getAssetsImagesByPage('CERAMICS_PAGE');
   }
 
   ngOnInit(): void {
