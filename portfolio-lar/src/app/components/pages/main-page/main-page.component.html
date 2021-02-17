@@ -24,11 +24,30 @@
                 <h4>{{ 'page_title' | translate }}</h4> -->
             </div>
             <div class="col-sm-6 col-12">
-                <a mdbBtn class="nav-button" routerLink="ceramics" type="button" color="info" outline="true" mdbWavesEffect>{{ 'MAIN_PAGE.ceramics_btn' | translate }}</a>
+                <button
+                    mdbBtn
+                    class="nav-button"
+                    routerLink="ceramics"
+                    type="button"
+                    color="info"
+                    outline="true"
+                    mdbWavesEffect>
+                    {{ 'MAIN_PAGE.ceramics_btn' | translate }}
+                </button>
                 <p>{{ 'MAIN_PAGE.ceramics_section_text' | translate }}</p>
             </div>
             <div class="col-sm-6 col-12">
-                <a mdbBtn class="nav-button" routerLink="metal" type="button" color="info" outline="true" mdbWavesEffect>{{ 'MAIN_PAGE.metal_btn' | translate }}</a>
+                <button
+                    mdbBtn
+                    class="nav-button"
+                    routerLink="metal"
+                    type="button"
+                    color="info"
+                    outline="true"
+                    disabled
+                    mdbWavesEffect>
+                    {{ 'MAIN_PAGE.metal_btn' | translate }}
+                </button>
                 <p>{{ 'MAIN_PAGE.metal_section_text' | translate }}</p>
             </div>
         </div>

@@ -1,0 +1,43 @@
+<div class="gallery-item">
+  <pkl-preloader *ngIf="loading"></pkl-preloader>
+  <div class="gallery-item-image">
+      <img
+          *ngIf="!noImage"
+          class="d-block w-100"
+          [src]="image.imageAddress"
+          [alt]="image.imageCaption"
+          (load)="hideLoader()"
+          (error)="showPlaceholder()"
+          (click)="showFullImage()"
+      >
+      <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+      <p *ngIf="noImage" class="text-center">
+        <mdb-icon far icon="image" size="5x" class="image-placeholder m-5"></mdb-icon>
+      </p>
+  </div>
+  <div class="gallery-item-caption">
+      <div class="d-flex align-items-center">
+        <span
+          class="gallery-item-price"
+          [ngClass]="{'active-price': image.onSale}">
+          {{ image.imageCaption }}
+        </span>
+        <span 
+          *ngIf="image.onSale"
+          class="gallery-item-label active-label ml-auto">
+          {{ "GALLERY_PAGE.in_stock_label" | translate }}
+        </span>
+        <span 
+          *ngIf="!image.onSale"
+          class="gallery-item-label disabled-label ml-auto">
+          {{ "GALLERY_PAGE.out_stock_label" | translate }}
+        </span>
+      </div>
+    <p class="gallery-item-details">{{ image.imageSecondaryText }}</p>
+  </div>
+</div>
+<!--Call Popup-->
+<pkl-modal [image]="image"></pkl-modal>
+<!--Call Popup-->
+
+

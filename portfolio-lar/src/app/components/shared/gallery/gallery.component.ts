@@ -10,7 +10,7 @@ import { ModalComponent } from 'src/app/components/shared/modal/modal.component'
 export class GalleryComponent implements OnInit {
   @Input() images: Image[];
   @ViewChild(ModalComponent) modalComponent: ModalComponent;
-
+  loading: boolean = true;
   public imageUrl: string;
 
   constructor() { }
@@ -21,6 +21,10 @@ export class GalleryComponent implements OnInit {
   showFullImage(selectedImageUrl: string) {
       this.imageUrl = selectedImageUrl;
       this.modalComponent.showModal();
+  }
+
+  hideLoader() {
+    this.loading = false;
   }
 
 }

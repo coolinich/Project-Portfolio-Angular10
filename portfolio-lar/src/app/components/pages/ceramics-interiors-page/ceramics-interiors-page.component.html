@@ -12,12 +12,20 @@
         </div>
     </div>
     <div class="container">
+        <h3 class="interiors-page-heading mt-3 mb-3">
+            {{ 'CERAMICS_INTERIORS_PAGE.heading' | translate }}
+        </h3>
         <div class="row">
             <pkl-category-tile *ngFor='let interiorData of interiorDesciptions'
               class="col-md-4 col-sm-6 col-12"
               [categoryImage]="interiorData"
               [categoryRoute]="interiorData?.imageTag">
             </pkl-category-tile>
+        </div>
+        <div class="interiors-page-text">
+            <p class="gallery-page-description">
+                {{ 'CERAMICS_INTERIORS_PAGE.description' | translate }}
+            </p>
         </div>
     </div>    
 </div>

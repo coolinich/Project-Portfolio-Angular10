@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
-import { LANGUAGES } from 'src/assets/constants';
+import { LANGUAGES } from 'src/environments/environment';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -15,9 +15,8 @@ export class SwitchLanguageComponent implements OnInit {
   constructor(private translate: TranslateService) { }
 
   ngOnInit(): void {
-    this.languageToUse = localStorage.getItem('language');
+    this.languageToUse = this.translate.currentLang;
     if (this.languageToUse != null) {
-      this.translate.use(this.languageToUse);
       this.languageToUseId = LANGUAGES.findIndex(el => el === this.languageToUse);
       this.setActiveBtn(this.languageToUseId);
     } else {

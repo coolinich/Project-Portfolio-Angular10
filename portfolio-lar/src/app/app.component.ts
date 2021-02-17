@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { LANGUAGES } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  languageToUse: string;
+
   title = 'portfolio-lar';
   
-  constructor() {
+  constructor(private translateService: TranslateService) {
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.languageToUse = localStorage.getItem('language');
+    if (this.languageToUse != null) {
+      this.translateService.use(this.languageToUse);
+    } else {
+      this.translateService.use(LANGUAGES[0]);
+    }
+  }
 
 }

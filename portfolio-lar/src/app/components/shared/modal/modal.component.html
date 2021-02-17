@@ -1,13 +1,42 @@
-<!--Modal Layout-->
+<!-- Modal Layout -->
 <div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-fluid modal-dialog-centered" role="document">
     <div class="modal-content">
-      <div class="modal-body text-center">
+      <div class="modal-body">
         <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
-            <mdb-icon fas icon="times"></mdb-icon>
+          <mdb-icon fas icon="times"></mdb-icon>
         </button>
-        <img *ngIf="imageURL" class="modal-img" [src]="imageURL">
-        <p *ngIf="!imageURL">Sorry, there is no full sized image</p>
+        <div class="modal-data d-flex flex-column flex-sm-row justify-content-center my-auto">
+          <div class="modal-image">
+            <img
+              *ngIf="!noImage"
+              class="modal-img"
+              [src]="image.imageAddress"
+              (error)="showPlaceholder()"
+            >
+            <p *ngIf="noImage" class="text-center">
+              <mdb-icon far icon="image" size="5x" class="image-placeholder m-5"></mdb-icon>
+            </p>
+          </div>
+          <div class="gallery-item-caption d-flex flex-column justify-content-start p-5">
+            <span
+              class="gallery-item-price"
+              [ngClass]="{'active-price': image.onSale}">
+              {{ image.imageCaption }}
+            </span>
+            <span 
+              *ngIf="image.onSale"
+              class="gallery-item-label active-label">
+              {{ "GALLERY_PAGE.in_stock_label" | translate }}
+            </span>
+            <span 
+              *ngIf="!image.onSale"
+              class="gallery-item-label disabled-label">
+              {{ "GALLERY_PAGE.out_stock_label" | translate }}
+            </span>
+            <p class="gallery-item-details mt-3">{{ image.imageSecondaryText }}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
