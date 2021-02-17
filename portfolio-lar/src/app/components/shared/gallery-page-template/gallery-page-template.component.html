@@ -1,14 +1,16 @@
 <div class="gallery-page">
     <div class="container">
-        <div class="gallery-page-text">
-            <h3 class="gallery-page-title">
-                {{ templateSettings?.templateHeading | translate }}
-            </h3>
+        <h3 class="gallery-page-heading mt-3 mb-3">
+            {{ templateSettings?.templateHeading | translate }}
+        </h3>
+        <pkl-preloader *ngIf="!templateSettings?.templateImages"></pkl-preloader>
+        <pkl-images-placeholder *ngIf="templateSettings?.templateImages.length === 0"></pkl-images-placeholder>
+        <pkl-gallery [images]="templateSettings?.templateImages"></pkl-gallery>
+        <div class="gallery-page-text mt-3 mb-3">
             <p class="gallery-page-description">
                 {{ templateSettings?.templateText | translate }}
             </p>
         </div>
-        <pkl-gallery [images]="templateSettings?.templateImages"></pkl-gallery>
         <ng-container *ngTemplateOutlet="customTemplate"></ng-container>
     </div>
 </div>
