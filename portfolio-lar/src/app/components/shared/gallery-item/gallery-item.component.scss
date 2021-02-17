@@ -1,0 +1,50 @@
+@import 'src/styles.scss';
+
+.gallery-item {
+    padding: .5rem;
+    margin-top: 1rem;
+    box-shadow: 0 0 30px rgba($color: black, $alpha: .35);
+
+    .gallery-item-image {
+        img {
+            cursor: pointer;
+        }
+
+        .image-placeholder {
+            color: $text-color-disabled;
+        }
+    }
+
+    .gallery-item-caption {
+        padding: .5rem;
+
+        .gallery-item-price {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: $text-color-disabled;
+
+            .active-price {
+                color: $text-color-highlight-regular;
+            }
+        }
+        
+        .gallery-item-details, .gallery-item-label {
+            font-size: .8rem;
+        }
+        
+        .active-label {
+            color: $text-color-highlight;
+        }
+        
+        .disabled-label {
+            color: $text-color-disabled;
+        }
+        
+    }
+
+    &:hover {
+        box-shadow: 0 0 40px rgba($color: black, $alpha: .75);
+        transition: box-shadow .45s ease-in-out;
+    }
+}
+

@@ -1,5 +1,24 @@
+@import 'src/styles.scss';
+
 .breadcrumbs-settings {
     display: block;
     margin-top: 56px;
     font-size: .75rem;
+}
+
+.text-color, .breadcrumb-item:before {
+    color: $text-color-highlight!important;
+}
+
+// .breadcrumb-item:before {
+//     color: $text-color-highlight!important;
+// }
+
+.light-font .breadcrumb-item.active {
+    font-weight: 600;
+    color: $text-color-highlight!important;
+}
+
+.light-font .breadcrumb-item.active:before {
+    font-weight: 400;
 }

@@ -1,6 +1,9 @@
 {
     "global_title": "Welcome!",
     "page_title": "Home",
+    "PLACEHOLDER": {
+        "no_images": "Looking for inspiration..."
+    },
     "MENU": {
         "home": "Home",
         "about": "About",
@@ -22,7 +25,8 @@
         "category_4": "Interiors",
         "category_5": "Decor",
         "category_6": "Watercolor painting",
-        "sub_category_4": "Interior design"
+        "sub_category_4": "Interior design",
+        "description": "Some general text about all works"
     },
     "METAL_PAGE": {
         "metal_page_title": "Metal"
@@ -49,5 +53,30 @@
     "GALLERY_PAGE": {
         "in_stock_label": "Available",
         "out_stock_label": "Sold out"
+    },
+    "CERAMICS_SCULPTURES_PAGE": {
+        "heading": "Sculptures masterpieces",
+        "description": "Sculptures masterpieces"
+    },
+    "CERAMICS_PANELS_PAGE": {
+        "heading": "Unique wall panels",
+        "description": "Consider unique wall panels decors"
+    },
+    "CERAMICS_FOLKART_PAGE": {
+        "heading": "Folkart masterpieces",
+        "description": "Impressed by folkart"
+    },
+    "CERAMICS_INTERIORS_PAGE": {
+        "heading": "Interiors design",
+        "description": "Ideas for interiors",
+        "categories_title": "Idea "
+    },
+    "CERAMICS_DECOR_PAGE": {
+        "heading": "Unique decors",
+        "description": "Consider unique wall and interior decors"
+    },
+    "CERAMICS_WATERCOLOR_PAGE": {
+        "heading": "Watercolor masterpieces",
+        "description": "Watercolor masterpieces"
     }
 }

@@ -2,9 +2,23 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+export const LANGUAGES = ['ua', 'en', 'ru'];
+
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyBGoAtylRPyQGryOmJMVr_htF3FeV-VVzA",
+    authDomain: "cool-gallery-4b872.firebaseapp.com",
+    databaseURL: "https://cool-gallery-4b872-default-rtdb.firebaseio.com",
+    projectId: "cool-gallery-4b872",
+    storageBucket: "cool-gallery-4b872.appspot.com",
+    messagingSenderId: "548919063503",
+    appId: "1:548919063503:web:fa57c1802baa0b3538d8ba"
+  }
 };
+
+
+//  'https://firebasestorage.googleapis.com/v0/b/cool-gallery-4b872.appspot.com/o/' + encodeURIComponent(image.imageAddress) + '?alt=media&token=5825a350-e093-4d2a-b4ab-f506d7f59f93'
 
 /*
  * For easier debugging in development mode, you can import the following file

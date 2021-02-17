@@ -21,3 +21,29 @@
     padding: .25rem .5rem;
     color: $text-color-default;
 }
+
+.gallery-item-price {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: $text-color-disabled;
+}
+
+.active-price {
+    color: $text-color-highlight-regular;
+}
+
+.gallery-item-details, .gallery-item-label {
+    font-size: .8rem;
+}
+
+.active-label {
+    color: $text-color-highlight;
+}
+
+.disabled-label {
+    color: $text-color-disabled;
+}
+
+.image-placeholder {
+    color: $text-color-disabled;
+}

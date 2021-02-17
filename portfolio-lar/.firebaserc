@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "cool-gallery-4b872": {
+      "hosting": {
+        "portfolio-lar": [
+          "cool-gallery-4b872"
+        ]
+      }
+    }
+  }
+}

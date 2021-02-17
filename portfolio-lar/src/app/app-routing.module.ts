@@ -10,7 +10,10 @@ import { AboutUsPageComponent } from './components/pages/about-us-page/about-us-
 import { CeramicsCategoriesPageComponent } from './components/pages/ceramics-categories-page/ceramics-categories-page.component';
 import { MetalCategoriesPageComponent } from './components/pages/metal-categories-page/metal-categories-page.component';
 import { CeramicsWatercolorPageComponent } from './components/pages/ceramics-watercolor-page/ceramics-watercolor-page.component';
-
+import { CeramicSculpturesPageComponent } from './components/pages/ceramic-sculptures-page/ceramic-sculptures-page.component';
+import { CeramicDecorPageComponent } from './components/pages/ceramic-decor-page/ceramic-decor-page.component';
+import { CeramicPanelsPageComponent } from './components/pages/ceramic-panels-page/ceramic-panels-page.component';
+import { CeramicFolkartPageComponent } from './components/pages/ceramic-folkart-page/ceramic-folkart-page.component';
 
 const routes: Routes = [
   { path: 'home',
@@ -43,6 +46,27 @@ const routes: Routes = [
             component: CeramicsCategoriesPageComponent
           },
           {
+            path: 'sculptures',
+            component: CeramicSculpturesPageComponent,
+            data: {
+              breadcrumb: 'CERAMICS_PAGE.category_1'
+            }
+          },
+          {
+            path: 'panels',
+            component: CeramicPanelsPageComponent,
+            data: {
+              breadcrumb: 'CERAMICS_PAGE.category_2'
+            }
+          },
+          {
+            path: 'folkart',
+            component: CeramicFolkartPageComponent,
+            data: {
+              breadcrumb: 'CERAMICS_PAGE.category_3'
+            }
+          },
+          {
             path: 'interiors',
             data:
             {
@@ -66,6 +90,14 @@ const routes: Routes = [
                 }
               }
             ]
+          },
+          {
+            path: 'decor',
+            component: CeramicDecorPageComponent,
+            data:
+            {
+              breadcrumb: 'CERAMICS_PAGE.category_5'
+            }
           },
           {
             path: 'watercolor',
