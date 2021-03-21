@@ -22,6 +22,6 @@ export class MailService {
     };
 
     console.log(emailData);
-    return this.http.post(this.serverURL + '/send', JSON.stringify(emailData), httpOptions);
+    return this.http.post('/send', JSON.stringify(emailData), httpOptions);
   }
 }
