@@ -37,8 +37,11 @@
                 </ul>
             </div>
             <!-- Default form contact -->
-            <form class="contacts-form text-center px-5 py-3 col-sm-12 col-md-6" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-            
+            <form 
+              class="contacts-form text-center px-5 py-3 col-sm-12 col-md-6"
+              [formGroup]="contactForm"
+              (ngSubmit)="onSubmitToBot()"
+            >
                 <p class="h4 mb-4">{{ "CONTACTS_PAGE.CONTACT_FORM.heading" | translate }}</p>
             
                 <!-- Name -->
@@ -56,7 +59,7 @@
                 </div>
             
                 <!-- Copy -->
-                <mdb-checkbox formControlName="contactFormCopy" class="mb-4">{{ "CONTACTS_PAGE.CONTACT_FORM.send_copy_label" | translate }}</mdb-checkbox>
+                <!-- <mdb-checkbox formControlName="contactFormCopy" class="mb-4">{{ "CONTACTS_PAGE.CONTACT_FORM.send_copy_label" | translate }}</mdb-checkbox> -->
             
                 <!-- Send button -->
                 <button mdbBtn color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect"
