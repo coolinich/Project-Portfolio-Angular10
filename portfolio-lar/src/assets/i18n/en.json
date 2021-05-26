@@ -46,6 +46,7 @@
             "name": "Name",
             "email": "E-mail",
             "message": "Message",
+            "error_too_long_message": "Message can be up to 4096 symbols",
             "send_copy_label": "Send me a copy of this message",
             "button": "SEND"
         }
