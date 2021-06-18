@@ -42,9 +42,10 @@
         "contacts_heading": "Зв'язатись з нами",
         "CONTACT_FORM": {
             "heading": "Надіслати листа",
-            "name": "Им'я",
+            "name": "Ім'я",
             "email": "E-mail",
-            "message": "Повідмлення",
+            "message": "Повідомлення",
+            "error_too_long_message": "Повідомлення має бути не довшим 4096 символів",
             "send_copy_label": "Надіслати мені копію листа",
             "button": "НАДІСЛАТИ"
         }

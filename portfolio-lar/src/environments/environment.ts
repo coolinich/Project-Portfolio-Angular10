@@ -1,8 +1,12 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
+// token 1760588201:AAGyfdWxlNLLPTb68DCd2GFQsMt2kIaLYxA
+// name gorno_user_bot  t.me/gorno_user_bot
 
 export const LANGUAGES = ['ua', 'en', 'ru'];
+export const BOT_URL = 'https://api.telegram.org/bot1760588201:AAGyfdWxlNLLPTb68DCd2GFQsMt2kIaLYxA/';
+export const CHAT_ID = '-538197852';
 
 export const environment = {
   production: false,

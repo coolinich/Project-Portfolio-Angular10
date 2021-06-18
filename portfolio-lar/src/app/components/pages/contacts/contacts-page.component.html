@@ -36,34 +36,52 @@
                     </li>
                 </ul>
             </div>
-            <!-- Default form contact -->
-            <form class="contacts-form text-center px-5 py-3 col-sm-12 col-md-6" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <form 
+              class="contacts-form text-center px-5 py-3 col-sm-12 col-md-6"
+              [formGroup]="contactForm"
+            >
+
+                    <p class="h4 mb-4">{{ "CONTACTS_PAGE.CONTACT_FORM.heading" | translate }}</p>
             
-                <p class="h4 mb-4">{{ "CONTACTS_PAGE.CONTACT_FORM.heading" | translate }}</p>
-            
-                <!-- Name -->
-                <input type="text" formControlName="contactFormName" id="defaultContactFormName" mdbInput
-                class="form-control mb-4" [placeholder]="'CONTACTS_PAGE.CONTACT_FORM.name' | translate">
-            
-                <!-- Email -->
-                <input type="email" formControlName="contactFormEmail" id="defaultContactFormEmail" mdbInput
-                class="form-control mb-4" [placeholder]="'CONTACTS_PAGE.CONTACT_FORM.email' | translate">
-            
-                <!-- Message -->
-                <div class="form-group">
-                <textarea formControlName="contactFormMessage" class="form-control rounded-0" mdbInput id="exampleFormControlTextarea2"
-                    rows="3" [placeholder]="'CONTACTS_PAGE.CONTACT_FORM.message' | translate"></textarea>
-                </div>
-            
-                <!-- Copy -->
-                <mdb-checkbox formControlName="contactFormCopy" class="mb-4">{{ "CONTACTS_PAGE.CONTACT_FORM.send_copy_label" | translate }}</mdb-checkbox>
-            
-                <!-- Send button -->
-                <button mdbBtn color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect"
-                mdbWavesEffect type="submit" [disabled]="disabledSubmitButton">{{ "CONTACTS_PAGE.CONTACT_FORM.button" | translate }}</button>
-            
+                    <!-- Name -->
+                    <input type="text" formControlName="contactFormName" id="defaultContactFormName" mdbInput
+                    class="form-control mb-4" [placeholder]="'CONTACTS_PAGE.CONTACT_FORM.name' | translate">
+                
+                    <!-- Email -->
+                    <input type="email" formControlName="contactFormEmail" id="defaultContactFormEmail" mdbInput
+                    class="form-control mb-4" [placeholder]="'CONTACTS_PAGE.CONTACT_FORM.email' | translate">
+                
+                    <!-- Message -->
+                    <div class="md-form form-group">
+                        <textarea 
+                            formControlName="contactFormMessage"
+                            class="form-control"
+                            mdbInput
+                            mdbValidate
+                            rows="5"
+                            id="exampleFormControlTextarea2"
+                            [placeholder]="'CONTACTS_PAGE.CONTACT_FORM.message' | translate">
+                        </textarea>
+                            <mdb-error 
+                            *ngIf="contactFormMessage.invalid &&
+                             (contactFormMessage.dirty || contactFormMessage.touched) &&
+                             contactFormMessage.errors?.maxlength">
+                             {{ 'CONTACTS_PAGE.CONTACT_FORM.error_too_long_message' | translate }}
+                            </mdb-error>  
+                    </div>
+                <button
+                    mdbBtn
+                    color="info"
+                    outline="true"
+                    block="true"
+                    class="z-depth-0 my-4 waves-effect"
+                    mdbWavesEffect
+                    type="submit"
+                    (click)="onSubmitToBot()"
+                    [disabled]="disabledSubmitButton">
+                    {{ "CONTACTS_PAGE.CONTACT_FORM.button" | translate }}
+                </button>
             </form>
-            <!-- Default form contact -->
         </div>  
     </div>    
 </div>
