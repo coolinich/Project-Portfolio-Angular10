@@ -1,18 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ImageService } from 'src/app/services/image.service';
 import { ImagesDescription } from 'src/app/interfaces/image';
 import { Image } from 'src/app/interfaces/image';
 import { TranslateService } from '@ngx-translate/core';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'pkl-ceramics-interiors-page',
   templateUrl: './ceramics-interiors-page.component.html',
   styleUrls: ['./ceramics-interiors-page.component.scss']
 })
-export class CeramicsInteriorsPageComponent implements OnInit {
+
+export class CeramicsInteriorsPageComponent implements OnInit, OnDestroy {
   interiorDesciptions: Image[];
   tileCaption$ = this.translateService.stream("CERAMICS_INTERIORS_PAGE.categories_title");
   tileDefaultCaption: string = '';
+
+  private readonly activePageSubject$ = new Subject;
   
 
   constructor(
@@ -25,6 +30,7 @@ export class CeramicsInteriorsPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.imageService.getImagesByKeyValue('imagePage', 'INTERIORS_PAGE')
+    .pipe(takeUntil(this.activePageSubject$))
     .subscribe(
       (data: Image[] | any[]) => {
         this.interiorDesciptions = data
@@ -38,7 +44,9 @@ export class CeramicsInteriorsPageComponent implements OnInit {
       }
     )
 
-    this.tileCaption$.subscribe(translatedCaption => {
+    this.tileCaption$
+    .pipe(takeUntil(this.activePageSubject$))
+    .subscribe(translatedCaption => {
         this.interiorDesciptions = this.interiorDesciptions ? this.interiorDesciptions.map((image: Image, index: number) => {
         return {
           ...image,
@@ -47,5 +55,9 @@ export class CeramicsInteriorsPageComponent implements OnInit {
       }) : [];
     });
 
+  }
+
+  ngOnDestroy(): void {
+    this.activePageSubject$.next();
   }
 }

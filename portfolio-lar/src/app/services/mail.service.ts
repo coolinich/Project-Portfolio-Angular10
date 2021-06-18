@@ -7,7 +7,6 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class MailService {
-  serverURL = 'http://localhost:3000';
 
   constructor(
     private http: HttpClient
@@ -21,7 +20,6 @@ export class MailService {
       }),
     };
 
-    console.log(emailData);
-    return this.http.post(this.serverURL + '/send', JSON.stringify(emailData), httpOptions);
+    return this.http.post('/send', JSON.stringify(emailData), httpOptions);
   }
 }
