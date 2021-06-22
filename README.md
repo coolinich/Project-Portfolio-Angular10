@@ -15,7 +15,7 @@ The task was to:
 
 
 ## Manual
-This project was generated with Angular CLI version 8.1.3.
+This project was generated with Angular CLI version 10.0.0.
 
 ### Development server
 Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
