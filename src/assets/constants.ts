@@ -1,4 +1,5 @@
 import { Image } from 'src/app/interfaces/image';
+export const LANGUAGES = ['ua', 'en', 'ru'];
 
 export const ALL_IMAGES: Image[] = [
   {
