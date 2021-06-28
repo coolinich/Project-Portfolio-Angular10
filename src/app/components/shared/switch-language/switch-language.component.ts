@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
-import { LANGUAGES } from 'src/environments/environment';
+import { LANGUAGES } from 'src/assets/constants';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
