@@ -24,18 +24,17 @@ export class SwitchLanguageComponent implements OnInit {
     }
   }
 
-  changeLanguage(selectedLanguage: number) {
+  changeLanguage(selectedLanguage: number): void {
     this.setActiveBtn(selectedLanguage);
     this.languageToUse = LANGUAGES[selectedLanguage];
     this.translate.use(this.languageToUse);
     localStorage.setItem('language', this.languageToUse);
   }
 
-  setActiveBtn(selectedLanguage: number) {
+  setActiveBtn(selectedLanguage: number): void {
     if (document.getElementsByClassName('selected').length) {
       Array.from(document.getElementsByClassName('selected')).forEach(el => el.classList.remove('selected'));
     }
     document.getElementById('languageId-' + selectedLanguage.toString())?.classList.add('selected');
   }
-
 }

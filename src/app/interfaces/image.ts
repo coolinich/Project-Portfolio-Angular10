@@ -1,5 +1,5 @@
 export interface Image {
-    imageId?: number | string; 
+    imageId?: number | string;
     imageAddress: string;
     imageCaption?: string;
     imageSecondaryText?: string;
@@ -9,7 +9,7 @@ export interface Image {
 }
 
 export interface ImagesDescription {
-    templateImages: Image[],
-    templateHeading?: string,
-    templateText?: string
+    templateImages: Image[];
+    templateHeading?: string;
+    templateText?: string;
 }

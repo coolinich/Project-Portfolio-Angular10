@@ -5,5 +5,4 @@ export interface EmailBody {
     contactFormCopy?: boolean;
 }
 
-export interface PostEmailResponse {
-}
+export interface PostEmailResponse {}

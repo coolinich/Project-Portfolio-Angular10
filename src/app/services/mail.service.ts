@@ -16,7 +16,7 @@ export class MailService {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type':  'application/json',
-        'responseType': 'json'
+        responseType: 'json'
       }),
     };
 

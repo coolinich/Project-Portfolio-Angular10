@@ -11,12 +11,12 @@ export class ContactBotService {
   constructor(
     private http: HttpClient
   ) { }
-  
+
   sendMessageToBot(messageBody: BotMessageBody): Observable<PostBotResponse> {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'responseType': 'json'
+        responseType: 'json'
       })
     };
     return this.http.post<PostBotResponse>(BOT_URL + 'sendMessage', JSON.stringify(messageBody), httpOptions);

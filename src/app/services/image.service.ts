@@ -15,11 +15,10 @@ export class ImageService {
   images: Image[];
 
 
-  constructor(private db: AngularFireDatabase, @Inject(FirebaseApp) fbApp)  {   
+  constructor(private db: AngularFireDatabase, @Inject(FirebaseApp) fbApp) {
     // TEST Firebase DB
     // const rootDBref = fbApp.database().ref();
     // rootDBref.child('Images/2').on('value', shapshot => console.log(shapshot.val()));
-    
   }
 
   getAssetsImagesAll(): Image[] {
@@ -31,12 +30,11 @@ export class ImageService {
     return this.allImages.filter(image => image.imagePage === pageTitle);
   }
 
-  getAllImagesDB():Observable<Image[] | any[]> {
+  getAllImagesDB(): Observable<Image[] | any[]> {
     return this.db.list('Images').valueChanges();
   }
 
   getImagesByKeyValue(key: string, value: string): Observable<Image[] | any[]> {
-    return this.db.list('Images', ref => ref.orderByChild(key).equalTo(value)).valueChanges()
+    return this.db.list('Images', ref => ref.orderByChild(key).equalTo(value)).valueChanges();
   }
-
 }
